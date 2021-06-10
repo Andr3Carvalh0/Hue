@@ -1,0 +1,20 @@
+detekt {
+    toolVersion = rootProject.ext.versions.detekt
+    buildUponDefaultConfig = true
+    config = files("$rootDir/detekt.yml")
+    input = files(
+        "src/main/kotlin",
+        "src/test/kotlin",
+        "src/androidTest/kotlin"
+    )
+
+    reports {
+        html {
+            enabled = true
+        }
+    }
+}
+
+dependencies {
+    detektPlugins rootProject.ext.dependencies.detektFormatting
+}

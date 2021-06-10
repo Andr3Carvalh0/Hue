@@ -1,0 +1,65 @@
+ext {
+    versions = [
+        kotlin                   : "1.5.10",
+        coroutines               : "1.5.0",
+        coreKtx                  : "1.5.0",
+        fragmentKtx              : "1.3.4",
+        lifecycle                : "2.3.1",
+        coil                     : "1.2.2",
+        materialComponents       : "1.3.0",
+        accompanist              : "0.11.1",
+
+        detekt                   : "1.16.0",
+        leakCanary               : "2.7",
+
+        compose                  : "1.0.0-beta08",
+        composeActivity          : "1.3.0-alpha08",
+        composeConstraintLayout  : "1.0.0-alpha07",
+        appcompat                : "1.3.0",
+
+        // Unit Tests
+        junit                    : "4.13.2",
+        mockito                  : "2.2.0",
+
+        // UI Tests
+        junitExt                 : "1.1.2",
+        espresso                 : "3.3.0",
+        mockitoAndroid           : "3.7.8"
+    ]
+
+    dependencies = [
+        kotlinStdlib             : "org.jetbrains.kotlin:kotlin-stdlib:${versions.kotlin}",
+
+        coroutines               : "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}",
+        coroutinesAndroid        : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}",
+        coroutinesTest           : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutines}",
+
+        materialComponents       : "com.google.android.material:material:${versions.materialComponents}",
+        coreKtx                  : "androidx.core:core-ktx:${versions.coreKtx}",
+        fragmentKtx              : "androidx.fragment:fragment-ktx:${versions.fragmentKtx}",
+        lifecycleRuntimeKtx      : "androidx.lifecycle:lifecycle-runtime-ktx:${versions.lifecycle}",
+
+        leakCanary               : "com.squareup.leakcanary:leakcanary-android:${versions.leakCanary}",
+
+        composeUi                : "androidx.compose.ui:ui:${versions.compose}",
+        composeConstraintLayout  : "androidx.constraintlayout:constraintlayout-compose:${versions.composeConstraintLayout}",
+        composeTooling           : "androidx.compose.ui:ui-tooling:${versions.compose}",
+        composeFoundation        : "androidx.compose.foundation:foundation:${versions.compose}",
+        composeMaterial          : "androidx.compose.material:material:${versions.compose}",
+        composeFlowLayout        : "com.google.accompanist:accompanist-flowlayout:${versions.accompanist}",
+        composeActivity          : "androidx.activity:activity-compose:${versions.composeActivity}",
+        appcompat                : "androidx.appcompat:appcompat:${versions.appcompat}",
+
+        // Unit Tests
+        junit                    : "junit:junit:${versions.junit}",
+        mockito                  : "com.nhaarman.mockitokotlin2:mockito-kotlin:${versions.mockito}",
+
+        // UI Tests
+        junitExt                 : "androidx.test.ext:junit:${versions.junitExt}",
+        espresso                 : "androidx.test.espresso:espresso-core:${versions.espresso}",
+        mockitoAndroid           : "org.mockito:mockito-android:${versions.mockitoAndroid}",
+        composeTest              : "androidx.compose.ui:ui-test-junit4:${versions.compose}",
+
+        detektFormatting         : "io.gitlab.arturbosch.detekt:detekt-formatting:${versions.detekt}"
+    ]
+}

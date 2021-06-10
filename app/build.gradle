@@ -22,8 +22,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion kotlin_version
+        kotlinCompilerExtensionVersion rootProject.ext.versions.compose
     }
 
     buildTypes {
@@ -45,16 +44,21 @@ android {
 }
 
 dependencies {
-    implementation "androidx.core:core-ktx:$core_ktx_version"
-    implementation "androidx.appcompat:appcompat:$app_compat_version"
-    implementation "com.google.android.material:material:$material_version"
-    implementation "androidx.compose.ui:ui:$compose_version"
-    implementation "androidx.compose.material:material:$compose_version"
-    implementation "androidx.compose.ui:ui-tooling:$compose_version"
-    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
-    implementation "androidx.activity:activity-compose:$activity_compose_version"
+    def dependencies = rootProject.ext.dependencies
 
-    testImplementation "junit:junit:$junit_version"
-    androidTestImplementation "androidx.test.ext:junit:$junit_ext_version"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    implementation dependencies.appcompat
+    implementation dependencies.coreKtx
+    implementation dependencies.composeActivity
+    implementation dependencies.composeUi
+    implementation dependencies.composeMaterial
+    implementation dependencies.composeTooling
+    implementation dependencies.lifecycleRuntimeKtx
+
+    testImplementation dependencies.junit
+    testImplementation dependencies.mockito
+
+    androidTestImplementation dependencies.junitExt
+    androidTestImplementation dependencies.espresso
+    androidTestImplementation dependencies.mockitoAndroid
+    androidTestImplementation dependencies.composeTest
 }
